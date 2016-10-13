@@ -8,12 +8,13 @@
 	<h1>Formularz rezerwacji</h1>
 	<h4>Rezerwacja samchodu</h4>
 	<ol>
-		<li>Wypełnij formularz zgłoszeniowy</li>
+		<li>Wypełnij <a href="#form">formularz</a> zgłoszeniowy</li>
 		<li>Potwierdź rezerwacji w otrzymanej wiadomości email</li>
 		<li>W terminie do 7 dni przez datą wynajmu wpłać zaliczkę</li>
-		<li>Ciesz się z komfortu oferowanych przez nas samochodów</li>
+		<li>Ciesz się z <b>komfortu</b> oferowanych przez nas samochodów</li>
 	</ol>
-	<form>
+	<a name="form"></a>
+	<form name="form">
 		Imię</br>
 		<input type="text"/></br></br>
 		Nazwisko</br>
@@ -26,12 +27,29 @@
 		</form></br>
 		Rezerwowany samochód</br>
 		<select>
+		<optgroup label="mini van">
+			<option value="audi">Renault Scenic</option>
+		</optgroup>
+		<optgroup label="kombi">
 			<option value="audi">Audi A3</option>
 			<option value="skoda">Skoda Fabia</option>
+		</optgroup>
+		<optgroup label="hatchback">
+			<option value="skoda">Skoda Fabia</option>
+		</optgroup>
 		</select></br></br>
 		Uwagi</br>
- 		<textarea name="message" rows="10" cols="30"></textarea></br></br>
-		<input type="button" value="Zarezerwuj!">
+ 		<textarea name="message" rows="10" cols="80"></textarea></br></br>
+		<form>
+			<input type="checkbox">Mam ukończone 25 lat</input></br>
+			<input type="checkbox">Posiadam prawo jazdy kat. B</input></br>
+			<input type="checkbox">Planowany długość podróży przekracza 1000km</input></br>
+			<input type="checkbox">Podróż poza granicę Polski</input></br>
+			<input type="checkbox">Podróz poza granicę Unii Europejskiej</input></br>
+		</form></br></br>
+
+		<input type="reset" value="Wyczyść dane"/>
+		<input type="submit" value="Zarezerwuj!"/>
 	</form>
 	</body>
 
