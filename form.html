@@ -5,7 +5,7 @@
 		<title>Formularz rezerwacji</title>
 	</head>
 	<body>
-	<h1>Formularz rezerwacji</h1>
+	<h1 id="header">Formularz rezerwacji</h1>
 	<h4>Rezerwacja samchodu</h4>
 	<ol>
 		<li>Wypełnij <a href="#form">formularz</a> zgłoszeniowy</li>
@@ -13,8 +13,7 @@
 		<li>W terminie do 7 dni przez datą wynajmu wpłać zaliczkę</li>
 		<li>Ciesz się z <b>komfortu</b> oferowanych przez nas samochodów</li>
 	</ol>
-	<a id="form"></a>
-	<form name="form">
+	<form id="form">
 		Imię<br>
 		<input type="text"/><br><br>
 		Nazwisko<br>
@@ -50,6 +49,16 @@
 
 		<input type="reset" value="Wyczyść dane"/>
 		<input type="submit" value="Zarezerwuj!"/>
+	</form>
+	<form action="index.html">
+		<input type="submit" value="←   powrót" />
+	</form>
+	<form action="#header">
+		<input type="submit" value="↑   do góry" />
+	</form>
+	
+	<form action="mailto:admin@rentcar.com">
+		<input type="submit" value="zgłoś uwagi" />
 	</form>
 	</body>
 
