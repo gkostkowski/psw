@@ -1,3 +1,15 @@
+.obr_tab {
+	border: 1px solid black;
+   border-collapse: collapse;
+}
+
+.obr_tab td, th {
+	border: 1px solid black;
+   border-collapse: collapse;
+}
+
+
+
 #tabela {
    border: 1px solid black;
    border-collapse: collapse;
@@ -17,9 +29,6 @@ th {
 	
 }
 
-#tabela td {
-   border: 1px solid black;
-}
 
 td.custom {
    background-color: greenYellow;
@@ -27,11 +36,9 @@ td.custom {
    font-weight: bold;
    color:gold;
    align:center;
-   padding:5px;
-   
+   padding:5px; 
 }
 
 td.custom2 {
-	
 	background-color:aquamarine;
 }
