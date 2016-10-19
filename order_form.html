@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <!--TODO: wprowadz polskie znaki -->
+        <section id="1"><h3>Składanie zamówienia na samochód</h3>
+            <p>Drogi kliencie!
+                <br>Cieszymy sie, ze wybrałeś ofertę naszej firmy. Aby złożyć zamówienie wprowadź poniższe dane. Pola wymagane są oznaczone gwiazdką.
+            </p>
+            <form method="post" autocomplete>
+                <p><label>Imie
+                    <input type="text" autofocus/> tip
+                </label></p>
+                <p><label>Nazwisko:*
+                    <input type="text" /> tip
+                </label></p>
+                <p><label class="clue">Miesiac urodzin:
+                    <input type="datetime"/> Format: "MM"
+                </label></p>
+                <p><label>Miesiac urodzin:
+                    <input type="month"/> Format: "Miesiąc Rok". Wprowadź z klawiatury, użyj strzałek  ↑  ↓ lub wybierz z kalendarza
+                </label></p>
+                <p><label>Miesiac urodzin:
+                    <input type="datetime-local" />tip
+                </label></p>
+                <p><label>Adres email:*
+                    <input type="email" placeholder="example@domain.com" /> Adres poczty elektronicznej w formacie example@domain.com
+                </label></p>
+                <p><label>telefon:*
+                    <input type = "tel" placeholder = "(+##) ### ### ###"
+                     pattern ="\(\+\d{2}\) \d{3} \d{3} \d{3}" required /> Format: (+##) ### ### ###
+                </label></p>
+                <p><input type="submit"> 
+                    <input type="reset"></p>
+            </form>
+        </section>
+        <section id="2"> <h3>Więcej informacji</h3>
+            <p>Masz pyatnia? Nie jesteś pewny którą ofertę wybrać lub chciałbyś dostosować ofertę do swoich potrzeb? <br>
+            Napisz do Nas! Nasz konsultant skontaktuje się z Państwem w ciągu 24 godzin.</p>
+            <form  action="mailto:consultant@rentingcars.com">
+                <input type="submit" value="Kontakt">
+            </form>
+        </section>
+    </body>
+
+</html>
+
