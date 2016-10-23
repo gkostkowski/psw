@@ -10,15 +10,27 @@
 			 <h1>Wypożyczalnia Renting Cars</h1>
 	        </header>
 		<section>
+			<p><label></br>
+	            		<input type="search" placeholder="Szukaj"/>
+		        </label></p><br><br>
+
 			<h3>Twój samochód</h3>
 			<p>Powiedz nam czy jeździsz!</p>
 			<form method="post">
+				<p><label>Imię</br>
+		            		<input type="text" id="first_name" placeholder="Imię"/>
+			        </label></p>
+
+				<p><label>Nazwisko</br>
+		            		<input type="text" id="last_name" placeholder="Nazwisko"/>
+			        </label></p>
+
 				<p><label>Data zakupu</br>
-		            		<input type="month" placeholder="Miesiąc"/>
+		            		<input type="month" id="month" placeholder="Miesiąc"/>
 			        </label></p>
 
 				<p><label>Poziom zadowolenia</br>
-		            		<input type="range" min="0" max="10"/>
+		            		<input type="range" min="0" max="10" />
 			        </label></p>
 
 				<p><label>Kolor</br>
@@ -26,9 +38,7 @@
 			        </label></p>
 
 
-				<p><label></br>
-		            		<input type="search" placeholder="Szukaj"/>
-			        </label></p>
+
 
 				<p><label>Podaj nam link do zdjecia Twojego samochodu: </br>
 		            		<input type="url" placeholder="url"/>
