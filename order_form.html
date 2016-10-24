@@ -13,14 +13,13 @@
             <p>Drogi kliencie!
                 <br>Cieszymy sie, ze wybrałeś ofertę naszej firmy. Aby złożyć zamówienie <i>wprowadź poniższe dane. Pola wymagane są oznaczone gwiazdką.</i>
             </p>
-            <form method="post" autocomplete="on" >
+            <form method="post" autocomplete="on">
                 <input type="date" name="bday">
 				<p><label>Imie
                     <input type="text"  id="first_name" autofocus/> Imię użytkownika
                 </label></p>
-                <p><label>Nazwisko:*
-                    <input type="text" id="last_name"  required/> Nazwisko użytkownika
-                </label></p>
+                <label>Nazwisko:*</label>
+                    <input type="text" id="last_name" required/> Nazwisko użytkownika
                 <p><label class="clue">Miesiac urodzin:
                     <input type="datetime"  /> Format: "MM"
                 </label></p>
@@ -30,11 +29,11 @@
                 <p><label>Miesiac urodzin:
                     <input type="datetime-local" /> Format: "YYYY-MM-DD GG:mm". Wprowadź z klawiatury, użyj strzałek  ↑  ↓ lub wybierz z kalendarza
                 </label></p>
-                <p><label>Adres email:*
-                    <input type="email" placeholder="example@domain.com" /> Adres poczty elektronicznej w formacie example@domain.com
+                <p><label>Adres email:
+                    <input type="email" id="email" placeholder="example@domain.com" /> Adres poczty elektronicznej w formacie example@domain.com
                 </label></p>
                 <p><label>telefon:*
-                    <input type = "tel" placeholder = "(+##) ### ### ###"
+                    <input type = "tel" id ="tel" placeholder = "(+##) ### ### ###"
                      pattern ="\(\+\d{2}\) \d{3} \d{3} \d{3}" required /> Format: (+##) ### ### ###
                 </label></p>
                 <p><input type="submit"> 
