@@ -21,7 +21,7 @@
                     <input type="text" id="last_name"  required/> format tekstowy
                 </label></p>
 				<label> Miesiąc urodzenia:
-				<input list="months" name="month">
+				<input type="text" list="months" name="month">
 				<datalist id="months">
 					<option value="Styczeń">
 					<option value="Luty">
@@ -38,11 +38,11 @@
 				</datalist> Format tekstowy - wprowadź z klawiatury lub wybierz z rozwijanej listy
 				</label>
                 <p><label>Adres email:*
-                    <input type="email" required placeholder="example@domain.com" /> ciąg znakowy postaci: example@domain.com
-                </label></p>\
+                    <input type="email" id = "email" required placeholder="example@domain.com" /> ciąg znakowy postaci: example@domain.com
+                </label></p>
 		<p>
                 <label>telefon:*</label>
-                    <input type = "tel" placeholder = "(+##) ### ### ###"
+                    <input type = "tel" id="telephone" placeholder = "(+##) ### ### ###"
                      pattern ="\(\+\d{2}\) \d{3} \d{3} \d{3}" required /> Format: (+##) ### ### ### (dozwolone wyłącznie cyfry)
 		</p>
                 <p><input type="submit"> 
