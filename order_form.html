@@ -14,28 +14,35 @@
                 <br>Cieszymy sie, ze wybrałeś ofertę naszej firmy. Aby złożyć zamówienie <i>wprowadź poniższe dane. Pola wymagane są oznaczone gwiazdką.</i>
             </p>
             <form method="post" autocomplete="on" >
-                <input type="date" name="bday">
-				<p><label>Imie
-                    <input type="text"  id="first_name" autofocus/> Imię użytkownika
+				<p><label>Imie:
+                    <input type="text"  id="first_name" autofocus/> format tekstowy
                 </label></p>
                 <p><label>Nazwisko:*
-                    <input type="text" id="last_name"  required/> Nazwisko użytkownika
+                    <input type="text" id="last_name"  required/> format tekstowy
                 </label></p>
-                <p><label class="clue">Miesiac urodzin:
-                    <input type="datetime"  /> Format: "MM"
-                </label></p>
-                <p><label>Miesiac urodzin:
-                    <input type="month" /> Format: "Miesiąc Rok". Wprowadź z klawiatury, użyj strzałek  ↑  ↓ lub wybierz z kalendarza
-                </label></p>
-                <p><label>Miesiac urodzin:
-                    <input type="datetime-local" /> Format: "YYYY-MM-DD GG:mm". Wprowadź z klawiatury, użyj strzałek  ↑  ↓ lub wybierz z kalendarza
-                </label></p>
+				<label> Miesiąc urodzenia:
+				<input list="months" name="month">
+				<datalist id="months">
+					<option value="Styczeń">
+					<option value="Luty">
+					<option value="Marzec">
+					<option value="Kwiecień">
+					<option value="Maj">
+					<option value="Czerwiec">
+					<option value="Lipiec">
+					<option value="Sierpień">
+					<option value="Wrzesień">
+					<option value="Październik">
+					<option value="Listopad">
+					<option value="Grudzień">
+				</datalist> Format tekstowy - wprowadź z klawiatury lub wybierz z rozwijanej listy
+				</label>
                 <p><label>Adres email:*
-                    <input type="email" placeholder="example@domain.com" /> Adres poczty elektronicznej w formacie example@domain.com
+                    <input type="email" required placeholder="example@domain.com" /> ciąg znakowy postaci: example@domain.com
                 </label></p>
                 <p><label>telefon:*
                     <input type = "tel" placeholder = "(+##) ### ### ###"
-                     pattern ="\(\+\d{2}\) \d{3} \d{3} \d{3}" required /> Format: (+##) ### ### ###
+                     pattern ="\(\+\d{2}\) \d{3} \d{3} \d{3}" required /> Format: (+##) ### ### ### (dozwolone wyłącznie cyfry)
                 </label></p>
                 <p><input type="submit"> 
                     <input type="reset"></p>
