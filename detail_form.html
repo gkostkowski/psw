@@ -1,21 +1,37 @@
 ﻿<!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>Strona główna</title>
+		<meta charset="utf-8" >
+		<title>Formularz osobowy</title>
+		<meta name="decription	" content="oferta wypożyczalni samochodowej">
+		<meta name="keywords" content="wypożyczalnia, samochód, podróz, wakacje">
+		<link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+				<style>
+			.search {
+				width:250px;
+				height:60px;
+				padding: 5px 10px 5px 15px;
+				position:relative;
+				left: 58vw;
+				background-color:pink;
+			}
+		</style>
 	</head>
 	<body>
 		<header> 
-			 <img src = "header_logo.png" alt = "Renging Cars logo" />
-			 <h1>Wypożyczalnia Renting Cars</h1>
-	        </header>
+				 <img src = "img/header_logo.png" alt = "Renting Cars logo" />
+				 <h1 >Wypożyczalnia Renting Cars</h1>
+				 <h2 >Zaufaj profesjonalistom i podążaj do celu samochodem na miarę Twoich oczekiwań!</h2>
+		</header>
 		<section>
-			<p><label><br>
+			<p class="search" ><label><br>
 	            		<input type="search" placeholder="Szukaj"/>
 		        </label></p><br><br>
 
-			<h3>Twój samochód</h3>
-			<p>Powiedz nam czy jeździsz!</p>
+			<div class="prompt">
+				<h3>Twój samochód</h3>
+				<p >Powiedz nam czy jeździsz!</p>
+			</div>
 			<form method="post">
 				<p><label>Imię<br>
 		            		<input type="text" id="first_name" placeholder="Imię"/>
