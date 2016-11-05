@@ -1,5 +1,5 @@
 ﻿body {
-	
+
 
 
 	background-color:gray; /*wyswietlane w razie niepowodzenia zaladowania obrazka*/
@@ -7,18 +7,18 @@
 	background-image:url(../img/circle.png),repeating-linear-gradient(-45deg,  #cfffff, #cfffff 5px, white 5px, white 10px);
 	background-attachment:fixed, fixed;
 
-	
+
 	background-size: 6px 6px,100vw 100vh;
 	background-position:center bottom, center center;
-	
+
    /*background-attachment: fixed;*/
 	/*background-position: center bottom;*/
 	/*background-size: 100%;*/
 	/*background-size: cover;*/
 	/*background-position:10% 20%;*/
-	
+
 	height: 400px;
-	
+
 		margin-bottom:10vh;
 	margin-left:10vw;
 	margin-right:15vw;
@@ -35,19 +35,19 @@
 	padding: 1em 1em 1em 1em;
 	border:30px solid transparent;
 	border-image:url(../img/frame.png) 30 40 round;
-	
+
 }
 
 header {
 	background-color:yellow;
 	background-image:url(../img/shaking_hands.jpg), linear-gradient(45deg, #b78b24 1%,#ffffff 34%);
-	 
+
 	background-size: auto 100%;
 	background-repeat:no-repeat;
 	background-position: right,  left;
 	padding: 5% 10% 5% 10%;
 	display:inline-block;
-	
+
 	height:20vh;
 	width:80%;
 }
@@ -55,12 +55,12 @@ header {
 header img {
 	float:left;
 	margin: 3% 10% 3% 3%;
-	width:100px; height:100px; 
-	border-right: 10px double #851aff; 
-	border-bottom: 10px double #851aff; 
-	border-top: 10px groove red; 
+	width:100px; height:100px;
+	border-right: 10px double #851aff;
+	border-bottom: 10px double #851aff;
+	border-top: 10px groove red;
 	border-left: 10px groove red;
-	background-color:#eeffcc; 
+	background-color:#eeffcc;
 }
 
 header h1 {
@@ -84,7 +84,7 @@ nav {
 footer {
 	background-color:#fff2e6;
 	margin: 2vh 2vw 2vh 2vw;
-	padding:  1vh 1vw 1vh 1vw; 
+	padding:  1vh 1vw 1vh 1vw;
 	font-weight:lighter;
 	font-family:impact;
 	color:gray;
@@ -94,11 +94,85 @@ footer {
 form {
 	background-color:white;
 	margin: 2vh 2vw 2vh 2vw;
-	padding:  1vh 1vw 1vh 1vw; 
+	padding:  1vh 1vw 1vh 1vw;
 }
 
 input {
 	width: 200px;
+}
+
+p:active, h1:active, h2:active, section:active {
+	background-color: #fff2e6
+}
+
+input:checked {
+    margin-left: 50px;
+}
+
+textarea:empty {
+    border:1px solid yellow;
+}
+
+textarea:focus {
+    background-color: #d3d3d3;
+}
+
+input[type="text"]:enabled {
+    border:1px solid pink;
+}
+
+a:link {
+	color: gray;
+}
+a:visited {
+	color: #000000;
+}
+
+input[type="text"]:disabled {
+    background: #d3d3d3;
+}
+
+li:first-child {
+		font-size: 30px;
+}
+
+li:last-of-type {
+	font-size: 25px;
+}
+li:last-child {
+	font-size: 15	px;
+}
+
+input:not([type="text"]) {
+	font-family: Courier New;
+}
+
+:target[id="form"]{
+	font-size: 20px;
+}
+
+p[id="dear_client"] {
+	font-size: 25px;
+}
+
+article:last-child {
+    background: pink;
+}
+
+article:nth-child(2) {
+    background: pink;
+}
+
+article:nth-last-child(2) {
+    background: pink;
+}
+
+a:hover {
+	color: blue;
+}
+
+input:required {
+  box-shadow: 5px 5px 5px red;
 }
 
 .prompt {
@@ -122,6 +196,7 @@ form  label {
 }
 
 
+
 #dost_samochody {
 	background-color:#ffe0b3;
 }
@@ -131,7 +206,7 @@ form  label {
 	background-image: url(../img/tools.png);
 	background-repeat:repeat;
 	background-size: auto 5%;
-	background-position:center bottom;	
+	background-position:center bottom;
 	border:4px solid black;
 }
 
@@ -225,7 +300,7 @@ ol li {
    border-collapse: collapse;
    padding: 5px;
    background-color: #ffc;
-   
+
 }
 
 th {
@@ -236,7 +311,7 @@ th {
  #tabela td {
 	text-align:center;
 	color: brown;
-	
+
 }
 
 
@@ -246,9 +321,39 @@ td.custom {
    font-weight: bold;
    color:gold;
    align:center;
-   padding:5px; 
+   padding:5px;
 }
 
 td.custom2 {
 	background-color:aquamarine;
+}
+
+.absolute_position {
+	position: absolute;
+	top: 500px;
+	right: 200px;
+}
+
+.static_position {
+	position: static;
+	height: 50px;
+	width: auto;
+	background: pink;
+}
+
+.bn_absolute_pos1 {
+		position: absolute;
+		bottom: -500px;
+		right: 200px;
+}
+
+
+.bn_absolute_pos2 {
+		position: absolute;
+		bottom: -520px;
+		right: 200px;
+}
+
+.clear_pos {
+
 }
