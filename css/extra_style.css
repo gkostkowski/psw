@@ -7,7 +7,7 @@ input[type="text"]:disabled {
 	    background: pink;
 	}
 
-	article:nth-child(3) {
+	article:nth-child(4) {
 	    background: pink;
 	}
 
@@ -15,9 +15,6 @@ input[type="text"]:disabled {
 	    background: pink;
 	}
 }
-
-
-
 
 #menu, #menu ul, #menu ol {
  list-style-type:none;
