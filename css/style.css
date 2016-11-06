@@ -50,12 +50,13 @@ li:first-child {
 li:last-of-type {
 	font-size: 25px;
 }
+
 li:last-child {
-	font-size: 15	px;
+	font-size: 15px;
 }
 
 input:not([type="text"]) {
-	font-family: Courier New;
+	font-family: CourierNew;
 }
 
 :target[id="form"]{
@@ -82,7 +83,7 @@ a:hover {
 	color: blue;
 }
 
-input:required {
+required {
   box-shadow: 5px 5px 5px red;
 }
 
@@ -112,7 +113,6 @@ form  label {
 }
 
 h1, h2 {
-	text-spacing:10px;
 	text-shadow: 2px 2px #aaaaff;
 	text-transform:uppercase;
 	font-size:2vw;
@@ -184,7 +184,7 @@ ol li {
 
 th {
 	height:50px;
-	font-style:underline;
+	font-style:italic;
 }
 
  #tabela td {
@@ -199,7 +199,7 @@ td.custom {
    vertical-align: top;
    font-weight: bold;
    color:gold;
-   align:center;
+	 align-items: center;
    padding:5px;
 }
 
