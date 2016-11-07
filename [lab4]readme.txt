@@ -8,3 +8,4 @@ radialny: footer background
 7. body border
 12. form - 2 kolumny
 13. articles 1-3 col
+
