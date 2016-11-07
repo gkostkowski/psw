@@ -211,6 +211,7 @@ td.custom2 {
 	position: absolute;
 	top: 500px;
 	right: 200px;
+	border-radius: 5px;
 }
 
 .static_position {
@@ -235,4 +236,48 @@ td.custom2 {
 
 .clear_pos {
 
+}
+
+/************************/
+body article p {
+	border-radius: 0px 5px 5px 0px;
+}
+
+form {
+		-webkit-column-gap: 80px;
+		column-gap: 80px;
+		-webkit-column-count: 2;
+		column-count: 2;
+		-webkit-column-rule: 1px dashed gray;
+		column-rule: 1px dashed gray;
+	}
+
+@media handheld and (max-width:480px), screen and (max-device-width:480px) {
+	article {
+		-webkit-column-gap: 20px;
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
+}
+
+@media only screen and (min-width:481px) {
+	article:not(#stats):not(#param_tech) {
+		-webkit-column-gap: 30px;
+		column-gap: 30px;
+		-webkit-column-count:2;
+		column-count: 2;
+		-webkit-column-rule: 1px outset black;
+		column-rule: 1px outset black;
+	}
+}
+
+@media only screen and (min-width:1025px) {
+	article:not(#stats):not(#param_tech) {
+		-webkit-column-gap: 40px;
+		column-gap: 40px;
+		-webkit-column-count: 3;
+		column-count: 3;
+		-webkit-column-rule: 1px outset black;
+		column-rule: 1px outset black;
+	}
 }

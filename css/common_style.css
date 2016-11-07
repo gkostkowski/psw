@@ -4,7 +4,11 @@ body {
 
 	background-color:gray; /*wyswietlane w razie niepowodzenia zaladowania obrazka*/
 	/*background-image: url(../img/paski2.jpg);*/
-	background-image:url(../img/circle.png),repeating-linear-gradient(-45deg,  #cfffff, #cfffff 5px, white 5px, white 10px);
+	/**/background:url(../img/circle.png),-webkit-repeating-linear-gradient(right,  #cfffff, #cfffff 5px, white 5px, white 10px);
+	background:url(../img/circle.png),-moz-repeating-linear-gradient(right,  #cfffff, #cfffff 5px, white 5px, white 10px);
+	
+	background:url(../img/circle.png),repeating-linear-gradient(-45deg,  #cfffff, #cfffff 5px, white 5px, white 10px);
+	
 	background-attachment:fixed, fixed;
 
 
@@ -40,11 +44,15 @@ body {
 
 header {
 	background-color:yellow;
-	background-image:url(../img/shaking_hands.jpg), linear-gradient(45deg, #b78b24 1%,#ffffff 34%);
+	background:url(../img/shaking_hands.jpg), -webkit-gradient(left, #b78b24 1%,#ffffff 34%);
+	background:url(../img/shaking_hands.jpg), -moz-linear-gradient(left, #b78b24 1%,#ffffff 34%);
+	background:url(../img/shaking_hands.jpg), linear-gradient(45deg, #b78b24 1%,#ffffff 34%);
 
 	background-size: auto 100%;
 	background-repeat:no-repeat;
 	background-position: right,  left;
+	background-origin: border-box;
+	border:1px orange solid;
 	padding: 5% 10% 5% 10%;
 	display:inline-block;
 
@@ -68,6 +76,7 @@ header h1 {
 	font-size:2vw;
 	word-spacing:6px;
 	font-family:antiqua;
+	text-shadow: 3px 3px 5px brown;
 }
 
 header h2 {
@@ -80,7 +89,11 @@ header h2 {
 
 
 footer {
-	background-color:#fff2e6;
+	
+	background: -webkit-radial-gradient(center, green, greenYellow);
+	background: -moz-radial-gradient(center, green, greenYellow);
+	background: radial-gradient(center, green, greenYellow);
+	
 	margin: 2vh 2vw 2vh 2vw;
 	padding:  1vh 1vw 1vh 1vw;
 	font-weight:lighter;
@@ -104,6 +117,7 @@ footer {
 	height: 100px;
 	font-size:12pt;
 	line-height:90%;
+	border-radius: 10px 50px;
 }
 
 article {
