@@ -6,9 +6,9 @@ body {
 	/*background-image: url(../img/paski2.jpg);*/
 	/**/background:url(../img/circle.png),-webkit-repeating-linear-gradient(right,  #cfffff, #cfffff 5px, white 5px, white 10px);
 	background:url(../img/circle.png),-moz-repeating-linear-gradient(right,  #cfffff, #cfffff 5px, white 5px, white 10px);
-	
+
 	background:url(../img/circle.png),repeating-linear-gradient(-45deg,  #cfffff, #cfffff 5px, white 5px, white 10px);
-	
+
 	background-attachment:fixed, fixed;
 
 
@@ -89,11 +89,11 @@ header h2 {
 
 
 footer {
-	
+
 	background: -webkit-radial-gradient(center, green, greenYellow);
 	background: -moz-radial-gradient(center, green, greenYellow);
 	background: radial-gradient(center, green, greenYellow);
-	
+
 	margin: 2vh 2vw 2vh 2vw;
 	padding:  1vh 1vw 1vh 1vw;
 	font-weight:lighter;
