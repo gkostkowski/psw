@@ -8,5 +8,6 @@ Zrobione:
 radialny: footer background
 6. body background, header background
 7. body border
+8. etra style + info
 12. form - 2 kolumny
 13. articles 1-3 col

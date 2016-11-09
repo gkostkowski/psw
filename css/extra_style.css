@@ -91,7 +91,6 @@ div {
 
 #grad_radial {
   height: 55px;
-  width: 400px:
   background: -webkit-radial-gradient(cener, yellow, red, blue, #d2d2d2); /* For Safari 5.1 to 6.0 */
   background: -o-radial-gradient(center, yellow, red, blue, #d2d2d2); /* For Opera 11.1 to 12.0 */
   background: -moz-radial-gradient(center, yellow, blue, #d2d2d2); /* For Fx 3.6 to 15 */
@@ -104,5 +103,18 @@ div {
     background: -o-linear-gradient(left, yellow, red, blue, #d2d2d2); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(left, yellow, red, blue, #d2d2d2); /* For Fx 3.6 to 15 */
     background: linear-gradient(to right, yellow, red, blue, #d2d2d2); /* Standard syntax */
-
+    animation: mymove 5s infinite;
 }
+
+#animation {
+  animation: anim 5s infinite;
+  width: 20px;
+}
+
+@keyframes mymove {
+    0%   {width: 10%;}
+    50%  {width: 98%;}
+    100% {width: 10%;}
+}
+
+#animation
