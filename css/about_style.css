@@ -1,0 +1,31 @@
+.flexbox {
+  width: 1000px;
+  height: 480px;
+  display: -webkit-box;
+  display: box;
+  box-orient: horizontal;
+}
+
+.flexbox > div
+{
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 200px;
+  margin: 10px -5px 10px 0px;
+  padding: 20px 20px 20px 20px;
+
+}
+.flexbox > div{
+  background-color:white;
+}
+
+.flexbox > div:hover {
+  width: 400px;
+  font-weight: bold;
+  background-color: #d3d3d3;
+}
+
+p {
+ height: 350px;
+ overflow: hidden;
+}

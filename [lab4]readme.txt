@@ -8,6 +8,9 @@ Zrobione:
 radialny: footer background
 6. body background, header background
 7. body border
-8. etra style + info
+8. extra style + info
+9.  zrobię
+10. cos jest nie tak jeszcze.
+11. trzeba jeszcze dodac obrazki(zrobie to)
 12. form - 2 kolumny
 13. articles 1-3 col
