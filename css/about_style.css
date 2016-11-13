@@ -1,6 +1,6 @@
 .flexbox {
   width: 1000px;
-  height: 480px;
+  height: 600px;
   display: -webkit-box;
   display: box;
   box-orient: horizontal;
@@ -26,6 +26,16 @@
 }
 
 p {
- height: 350px;
- overflow: hidden;
+ font-family: 'Inconsolata';
+ height: 370px;
+
+}
+
+body { font-family: "Bitstream Vera Serif Bold", serif }
+
+@media screen{
+  @font-face {
+      font-family: "Bitstream Vera Serif Bold";
+      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+    }
 }

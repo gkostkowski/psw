@@ -118,8 +118,3 @@ div {
     50%  {width: 98%;}
     100% {width: 10%;}
 }
-
-@@font-face {
-  font-family: myFont;
-  src: url('https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf');
-}

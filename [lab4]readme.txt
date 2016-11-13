@@ -11,6 +11,6 @@ radialny: footer background
 8. extra style + info
 9.  zrobię
 10. cos jest nie tak jeszcze.
-11. trzeba jeszcze dodac obrazki(zrobie to)
+11. info.html
 12. form - 2 kolumny
 13. articles 1-3 col
