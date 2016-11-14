@@ -6,6 +6,7 @@ body {
 	/*background-image: url(../img/paski2.jpg);*/
 	/**/background:url(../img/circle.png),-webkit-repeating-linear-gradient(right,  #cfffff, #cfffff 5px, white 5px, white 10px);
 	background:url(../img/circle.png),-moz-repeating-linear-gradient(right,  #cfffff, #cfffff 5px, white 5px, white 10px);
+	background:url(../img/circle.png),-o-repeating-linear-gradient(right,  #cfffff, #cfffff 5px, white 5px, white 10px);
 
 	background:url(../img/circle.png),repeating-linear-gradient(-45deg,  #cfffff, #cfffff 5px, white 5px, white 10px);
 
@@ -46,6 +47,7 @@ header {
 	background-color:yellow;
 	background:url(../img/shaking_hands.jpg), -webkit-gradient(left, #b78b24 1%,#ffffff 34%);
 	background:url(../img/shaking_hands.jpg), -moz-linear-gradient(left, #b78b24 1%,#ffffff 34%);
+	background:url(../img/shaking_hands.jpg), -o-linear-gradient(left, #b78b24 1%,#ffffff 34%);
 	background:url(../img/shaking_hands.jpg), linear-gradient(45deg, #b78b24 1%,#ffffff 34%);
 
 	background-size: auto 100%;
@@ -92,6 +94,7 @@ footer {
 
 	background: -webkit-radial-gradient(center, green, greenYellow);
 	background: -moz-radial-gradient(center, green, greenYellow);
+	background: -o-radial-gradient(center, green, greenYellow);
 	background: radial-gradient(center, green, greenYellow);
 
 	margin: 2vh 2vw 2vh 2vw;
