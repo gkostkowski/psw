@@ -9,8 +9,8 @@ radialny: footer background
 6. body background, header background
 7. body border
 8. extra style + info
-9.  zrobię
-10. cos jest nie tak jeszcze.
+9.  
+10. fblm.html
 11. info.html
 12. form - 2 kolumny
 13. articles 1-3 col

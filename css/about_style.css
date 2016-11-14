@@ -26,16 +26,35 @@
 }
 
 p {
- font-family: 'Inconsolata';
  height: 370px;
 
 }
 
-body { font-family: "Bitstream Vera Serif Bold", serif }
+@font-face {
+  font-family: 'Calligraffitti';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/calligraffitti/v7/vLVN2Y-z65rVu1R7lWdvyF9q9cSakIY5dTu4rft1WBw.ttf);
+}
 
-@media screen{
-  @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
-    }
+body {
+    font-family: "Calligraffitti";
+    font-size: 14px;
+}
+
+.animat
+{
+  height: 100px;
+  width: 200px;
+  -webkit-animation: skew 3s infinite linear;
+  -moz-animation: skew 3s infinite linear;
+  animation: anim 3s infinite linear;
+}
+@-moz-keyframes anim
+{
+  from { -webkit-transform: skewX(0deg); }
+  25% { -webkit-transform: skewX(45deg); }
+  50% { -webkit-transform: skewY(0); }
+  75% { -webkit-transform: skewY(-45deg); }
+  to { -webkit-transform: skewY(0); }
 }
