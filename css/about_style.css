@@ -67,3 +67,19 @@ body {
   75% { -webkit-transform: skewY(-45deg); }
   to { -webkit-transform: skewY(0); }
 }
+
+img
+{
+-webkit-transition: -webkit-transform 4s;
+-moz-transition: -moz-transform 4s;
+-o-transition: -o-transform 4s;
+transition: transform 4s;
+}
+
+img:hover
+{
+  -webkit-transform: rotate(180deg) scale(2, 2);
+  -moz-transform: rotate(180deg) scale(2, 2);
+  -o-transform: rotate(180deg) scale(2, 2);
+  transform: rotate(180deg) scale(2, 2);
+}
