@@ -5,8 +5,9 @@
 		<title>Formularz osobowy</title>
 		<meta name="decription	" content="oferta wypożyczalni samochodowej">
 		<meta name="keywords" content="wypożyczalnia, samochód, podróz, wakacje">
-		<link rel = "stylesheet" type = "text/css" href = "css/common_style.css" />
+		<script src="js/script.js"></script>
 		<link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+		<script>document.writeln('<link rel = "stylesheet" type = "text/css" href = "css/'+getStyleName()+'" />')</script>
 				<style>
 			.search {
 				width:250px;
@@ -23,6 +24,8 @@
 				 <img src = "img/header_logo.png" alt = "Renting Cars logo" />
 				 <h1 >Wypożyczalnia Renting Cars</h1>
 				 <h2 >Zaufaj profesjonalistom i podążaj do celu samochodem na miarę Twoich oczekiwań!</h2>
+				 <div  id="colorBtn"></div>
+				 <div  id="blackBtn" ></div>
 		</header>
 		<section>
 			<p class="search" ><label><br>

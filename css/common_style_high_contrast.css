@@ -2,13 +2,8 @@ body {
 
 
 
-	background-color:gray; /*wyswietlane w razie niepowodzenia zaladowania obrazka*/
+	background-color:black; /*wyswietlane w razie niepowodzenia zaladowania obrazka*/
 	/*background-image: url(../img/paski2.jpg);*/
-	/**/background:url(../img/circle.png),-webkit-repeating-linear-gradient(right,  #cfffff, #cfffff 5px, white 5px, white 10px);
-	background:url(../img/circle.png),-moz-repeating-linear-gradient(right,  #cfffff, #cfffff 5px, white 5px, white 10px);
-	background:url(../img/circle.png),-o-repeating-linear-gradient(right,  #cfffff, #cfffff 5px, white 5px, white 10px);
-
-	background:url(../img/circle.png),repeating-linear-gradient(-45deg,  #cfffff, #cfffff 5px, white 5px, white 10px);
 
 	background-attachment:fixed, fixed;
 
@@ -34,7 +29,7 @@ body {
 	background-color:#f9f6ff ;*/
 	border-width:1px;
 	border-style:dotted;
-	border-color:#3c0080;
+	border-color:white;
 	width: 80%;
 	height:auto;
 	padding: 1em 1em 1em 1em;
@@ -43,9 +38,7 @@ body {
 
 }
 
-nav {
-	background-color:orange;
-}
+
 
 form {
 	background-color:white;
@@ -55,17 +48,14 @@ form {
 
 
 header {
-	background-color:yellow;
-	background:url(../img/shaking_hands.jpg), -webkit-gradient(left, #b78b24 1%,#ffffff 34%);
-	background:url(../img/shaking_hands.jpg), -moz-linear-gradient(left, #b78b24 1%,#ffffff 34%);
-	background:url(../img/shaking_hands.jpg), -o-linear-gradient(left, #b78b24 1%,#ffffff 34%);
-	background:url(../img/shaking_hands.jpg), linear-gradient(45deg, #b78b24 1%,#ffffff 34%);
+	background-color:gray;
+
 
 	background-size: auto 100%;
 	background-repeat:no-repeat;
 	background-position: right,  left;
 	background-origin: border-box;
-	border:1px orange solid;
+	border:1px white solid;
 	padding: 5% 10% 5% 10%;
 	display:inline-block;
 
@@ -77,11 +67,10 @@ header img {
 	float:left;
 	margin: 3% 10% 3% 3%;
 	width:100px; height:100px;
-	border-right: 10px double #851aff;
-	border-bottom: 10px double #851aff;
-	border-top: 10px groove red;
-	border-left: 10px groove red;
-	background-color:#eeffcc;
+
+	border: 10px groove black;
+
+	background-color:white;
 }
 
 header h1 {
@@ -103,10 +92,7 @@ header h2 {
 
 footer {
 
-	background: -webkit-radial-gradient(center, green, greenYellow);
-	background: -moz-radial-gradient(center, green, greenYellow);
-	background: -o-radial-gradient(center, green, greenYellow);
-	background: radial-gradient(center, green, greenYellow);
+	background: white;
 
 	margin: 2vh 2vw 2vh 2vw;
 	padding:  1vh 1vw 1vh 1vw;
@@ -116,9 +102,14 @@ footer {
 	font-size:12px;
 }
 
+ul {
+	font-family:consolas;
+	color:gray;
+}
+
 
 .prompt {
-	background-color:orange;
+	background-color:gray;
 	background-image: url(../img/pencil.png);
 	background-size:60px auto;
 	background-repeat:no-repeat;
@@ -137,14 +128,47 @@ footer {
 article {
 	text-indent: 50px;
 	text-align: justify;
+	color:white;
 	font-family: Arial, Palatino;
 	font-weight:lighter;
 	word-spacing: 10px;
 	width: 80%;
 	margin-left:6%;
 	line-height:120%;
-	border: 1px dotted gray;
+	border: 3px dotted gray;
 	border-left: 8px solid blue;
-	background-color:white;
+	background-color:black;
 	padding: 10px 10px 10px 15px;
+}
+
+section {
+		border: 3px double white;
+		font-size:1.2em;
+		color:white;
+}
+
+section, h1, h2 {
+		font-size:1.2em;
+		color:white;
+}
+
+h3, h4 {
+		font-size:1em;
+		color:white;
+		font-style:italic;
+		letter-spacing:0.7em;
+}
+
+p, div, body > #content > section, ol, a:link, a:visited {
+	color:white;
+	font-style:bold;
+	font-family:consolas;
+}
+
+nav > a {
+	color:white !important;
+}
+
+.absolute_position {
+visibility: hidden !important;
 }

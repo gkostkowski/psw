@@ -5,14 +5,17 @@
 		<meta name="decription	" content="oferta wypożyczalni samochodowej">
 		<meta name="keywords" content="wypożyczalnia, samochód, podróz, wakacje">
 		<title>Strona główna</title>
-		<link rel = "stylesheet" type = "text/css" href = "css/common_style.css" />
+		<script src="js/script.js"></script>
 		<link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+		<script>document.writeln('<link rel = "stylesheet" type = "text/css" href = "css/'+getStyleName()+'" />')</script>
 	</head>
 	<body>
 		<header>
 				 <img src = "img/header_logo.png" alt = "Renting Cars logo" />
 				 <h1 >Wypożyczalnia Renting Cars</h1>
 				 <h2 >Zaufaj profesjonalistom i podążaj do celu samochodem na miarę Twoich oczekiwań!</h2>
+				 <img  id="colorBtn" src = "img/color.png" alt = "color mode" />
+				 <img id="blackBtn" src = "img/black.png" alt = "high contrast mode" />
 		</header>
 		<nav>
 			<a href="form.html">Formularz rezerwacji</a> |
@@ -32,7 +35,7 @@
 		</article>
 
 		<section>
-			<h2>Oferta</h2>
+			<h2 id="subtitle">Oferta <script>document.getElementById("subtitle").innerHTML = getStyleName()</script></h2>
 			<p>Zapraszamy do zapoznania z ofertą naszej wypożyczalni</p>
 			<section>
 				<h3>Wynajem krótkookresowy</h3>
