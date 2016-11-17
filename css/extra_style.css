@@ -99,6 +99,7 @@ div {
 }
 
 #grad_linear {
+  visibility:hidden;
   height: 55px;
     background: -webkit-linear-gradient(left, yellow, red, blue, #d2d2d2); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(left, yellow, red, blue, #d2d2d2); /* For Opera 11.1 to 12.0 */
