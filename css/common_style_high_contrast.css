@@ -172,3 +172,8 @@ nav > a {
 .absolute_position {
 visibility: hidden !important;
 }
+
+#map {
+	width: 400px;
+	width: 600px;
+}

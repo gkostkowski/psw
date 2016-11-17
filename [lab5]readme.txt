@@ -1,15 +1,15 @@
 + document.writeln()
 + document.getElementById()
 + window.prompt()
-- window.alert()
++ window.alert()
 + window.addEventListener()
 + button.addEventListener()
-+ w³aœciwoœæ innerHTML
-- parseInt()
-- parseFloat()
-- Math.random()
++ wï¿½aï¿½ciwoï¿½ï¿½ innerHTML
++ parseInt()
++ parseFloat()
++ Math.random()
 + Math.floor()
-+ instrukcje steruj¹ce: if…else
++ instrukcje sterujï¿½ce: ifï¿½else
 + case
-- while, do…while, for
+- while, doï¿½while, for
 + zmienne globalne

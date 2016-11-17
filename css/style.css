@@ -6,31 +6,11 @@ p:active, h1:active, h2:active, section:active {
 	background-color: #fff2e6
 }
 
-input:checked {
-    margin-left: 50px;
-}
-
-textarea:empty {
-    border:1px solid yellow;
-}
-
-textarea:focus {
-    background-color: #d3d3d3;
-}
-
-input[type="text"]:enabled {
-    border:1px solid pink;
-}
-
 a:link {
 	color: gray;
 }
 a:visited {
 	color: #000000;
-}
-
-input[type="text"]:disabled {
-    background: #d3d3d3;
 }
 
 li:first-child {
@@ -45,9 +25,6 @@ li:last-child {
 	font-size: 15px;
 }
 
-input:not([type="text"]) {
-	font-family: CourierNew;
-}
 
 :target[id="form"]{
 	font-size: 20px;
@@ -243,7 +220,7 @@ form {
 	}
 header {
 	position:relative:
-}	
+}
 header > #colorBtn {
 	background:url("../img/color.png");
 	background-size:cover;
@@ -256,10 +233,10 @@ header > #colorBtn {
 	z-index:100;
 	margin:0;
 	padding:0;
-	
+
 	clear:both;
 	cursor:pointer;
-}	
+}
 header > #blackBtn {
 	background:url("../img/black.png");
 	background-size:cover;
@@ -271,9 +248,9 @@ header > #blackBtn {
 	top:1%;
 	margin:0;
 	padding:0;
-	
+
 	cursor:pointer;
-}	
+}
 
 
 #colorBtn:hover, #blackBtn:hover {
@@ -313,4 +290,3 @@ header > #blackBtn {
 		column-rule: 1px outset black;
 	}
 }
-

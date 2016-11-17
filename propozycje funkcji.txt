@@ -1,8 +1,10 @@
 1. obsluga formularza
-2. wyswietlenie strony w wysokim kontrascie 
+2. wyswietlenie strony w wysokim kontrascie
 	dwie ikonki zwykly i wysoki kontrast - mozna zrobic podmieniajac arkusze stylow, tzn osobny arkusz dla czarnego
 3. kalkulator kosztow wypozyczenia - pozwala OSZACOWAC  kompletny koszt
-	uzytkownik wprowadza kilka wartosci(wiek, czas wypozyczenia, czy weekend, ...) a program wylicza koszt. ustal jakas cene bazowa (za km - plan dystansowy lub  za godzine - plan czasowy) i do tego dodatki (np + 50zl za wiek < 25 ) 
+	uzytkownik wprowadza kilka wartosci(wiek, czas wypozyczenia, czy weekend, ...) a program wylicza koszt. ustal jakas cene bazowa (za km - plan dystansowy lub  za godzine - plan czasowy) i do tego dodatki (np + 50zl za wiek < 25 )
 4. ocen strone
-	wyswietlony tekst z info o ocenie i lista pod spodem oraz przycisk (mo¿e to byæ w formie formularza). Po wybraniu oceny wyœwietlaj¹ siê w tym miejscu gwiazdki (1-5 zielonych, pozostale szare)
+	wyswietlony tekst z info o ocenie i lista pod spodem oraz przycisk (moï¿½e to byï¿½ w formie formularza). Po wybraniu oceny wyï¿½wietlajï¿½ siï¿½ w tym miejscu gwiazdki (1-5 zielonych, pozostale szare)
 
+
+	AIzaSyCVLqh_1IkDO2vxvpbzimrOjunLUXe0snc 
