@@ -4,6 +4,8 @@
 		<meta charset="utf-8" >
 		<link rel = "stylesheet" type = "text/css" href = "css/map.css" />
 		<link rel = "stylesheet" type = "text/css" href = "css/common_style.css" />
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVLqh_1IkDO2vxvpbzimrOjunLUXe0snc&callback=initMap"> </script>
+		<script src="js/map.js"></script>
   </head>
   <body>
 		<header>
@@ -12,23 +14,7 @@
 					 <h2 >Zaufaj profesjonalistom i podążaj do celu samochodem na miarę Twoich oczekiwań!</h2>
 		</header>
 
-    <h3>My Google Maps Demo</h3>
+    <h3>Wybierz miejsce na wycieczkę</h3>
     <div id="map"></div>
-		<script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVLqh_1IkDO2vxvpbzimrOjunLUXe0snc&callback=initMap">
-    </script>
   </body>
 </html>
