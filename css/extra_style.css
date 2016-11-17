@@ -118,3 +118,9 @@ div {
     50%  {width: 98%;}
     100% {width: 10%;}
 }
+
+#commentBtn {
+	display:inline-block;
+	position:relative;
+	left:45%;
+}

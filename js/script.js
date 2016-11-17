@@ -17,8 +17,10 @@ function onLoad ()
 {
 	var colorBtn = document.getElementById("colorBtn");
 	var blackBtn = document.getElementById("blackBtn");
+	var commentBtn = document.getElementById("commentBtn");
 	colorBtn.addEventListener("click", onColorClick, false);
 	blackBtn.addEventListener("click", onBlackClick, false);
+	commentBtn.addEventListener("click", onCommentPrompt, false);
 	getDisplayMode();
 }
 
@@ -43,4 +45,6 @@ function onBlackClick ()
 	localStorage["displayMode"] = 1;
 	window.location.reload();
 }
+
+
 
