@@ -1,67 +1,74 @@
+var cities = [
+  {name: "Wroclaw", 	lat: 51.107885,            lng: 17.038538 },
+  {name: "Krakow", 		lat: 50.064650,            lng: 19.944980 },
+  {name: "Warszawa", 	lat: 52.229676,            lng: 21.012229 },
+  {name: "Praga", 		lat: 50.075538,            lng: 14.437800 }
+];
+
+
 var map;
-function initMap()
-{
-    var mapOptions = {
-    center: new google.maps.LatLng('23.11', '71.00'),
-    zoom: 2,
-    scrollwheel: false,
-    disableDefaultUI: false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-		marker: new google.maps.Marker({
-	 						position: new google.maps.LatLng(23.72, 72.100),
-	 						map: map,
-	 				}),
- };
+var markers = [];
 
-  map = new google.maps.Map(document.getElementById("map"),mapOptions);
- }
+function initMap() {
+  var defaultCity = {lat: cities[0].lat, lng: cities[0].lng};
 
- function addMarker(prop)
-  {
-		marker.setMap(null);
-     marker = new google.maps.Marker({
-                position: new google.maps.LatLng(prop.lat, prop.lng),
-                map: map,
-            });
+  map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 12,
+  center: defaultCity
+  });
+
+map.addListener('click', function(event) {
+    addMarker(event.latLng);
+  });
+
+  addMarker(defaultCity);
+}
+
+function addMarker(location) {
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  markers.push(marker);
+}
+
+function removeMarkers(map) {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
   }
-
-function getCityList() {
-		return [
-			{name: "Wroclaw", 	lat: 51.10815663, lng: 17.0482707}
-			{name: "Krakow", 		lat: 0, lng: 17.0482707 },
-			{name: "Warszawa", 	lat: 50, lng: 17.0482707 },
-			{name: "Praga", 		lat: 2, lng: 30 }
-		];
+  markers = [];
 }
 
 
 function cityList() {
 	var alertString = "";
-	var cityList = getCityList();
-	for (var i=0; i<cityList.length; i++)
-		alertString += "\n" + (i+1) + "." + cityList[i].name;
+	for (var i=0; i<cities.length; i++)
+		alertString += "\n" + (i+1) + "." + cities[i].name;
 
 	if (alertString.length == 0)
 		alert("Brak proponowanych miast");
 	else
 		alert("Proponowane miasta: \n" + alertString);
-};
+}
 
 function cityAmount() {
-	var cityList = getCityList();
 	var charNumber = 0;
 	var i = 0;
 
-	while (cityList[i]) {
-		charNumber += cityList[i].name.length;
+	while (cities[i]) {
+		charNumber += cities[i].name.length;
 		i++;
 	}
 
-	alert("Ilość miast: " + cityList.length +"\nSuma znaków w miastach: " + charNumber );
+	alert("Ilość miast: " + cities.length +"\nSuma znaków w miastach: " + charNumber );
 }
 
 function randomCity() {
-	var CityList = getCityList();
-	var index = Math.floor(Math.random() * cityList.length);
-	addMarker(CityList[index]);
+  var index = Math.floor(Math.random() * cities.length);
+  removeMarkers();
+  var location = {lat: cities[index].lat, lng: cities[index].lng}
+  addMarker(location);
+  map.setCenter(location);
+  map.setZoom(12);
+
 }
