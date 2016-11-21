@@ -4,8 +4,6 @@ var cities = [
   {name: "Warszawa", 	lat: 52.229676,            lng: 21.012229 },
   {name: "Praga", 		lat: 50.075538,            lng: 14.437800 }
 ];
-
-
 var map;
 var markers = [];
 
@@ -71,4 +69,21 @@ function randomCity() {
   map.setCenter(location);
   map.setZoom(12);
 
+}
+
+function printCars() {
+  var cars = [
+    {name: "audi", 	      price: 200 },
+    {name: "skoda", 		  price: 100 },
+    {name: "volkswagen", 	price: 150 },
+    {name: "bmw", 		    price: 190 }
+  ];
+  var numberOfCars = parseInt(document.getElementById("numberOfCars").value);
+  var i = 0;
+  var string = "Lista samochodów:<br>";
+  do {
+    string += (i+1) + ". " + cars[i].name + ", cena: " + cars[i].price + "<br>";
+    i++;
+  } while (i < numberOfCars);
+  document.getElementById("listOfCars").innerHTML = string;
 }
