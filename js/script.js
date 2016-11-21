@@ -20,7 +20,7 @@ function onLoad ()
 	var commentBtn = document.getElementById("commentBtn");
 	colorBtn.addEventListener("click", onColorClick, false);
 	blackBtn.addEventListener("click", onBlackClick, false);
-	commentBtn.addEventListener("click", onCommentPrompt, false);
+	//commentBtn.addEventListener("click", onCommentPrompt, false);
 	getDisplayMode();
 }
 

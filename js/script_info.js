@@ -7,7 +7,7 @@ function onLoad ()
 {
 	var commentBtn = document.getElementById("commentBtn");
 	commentBtn.addEventListener("click", onCommentPrompt, false);
-	document.getElementById("last_comment").innerHTML = checkLastActivity ();
+	document.getElementById("last_comment").innerHTML = checkLastActivity();
 
 	var date = new Date();
 }
