@@ -1,26 +1,26 @@
 Lista 6:
 1.
--createElement, 
--createTextNode, 
--appendChild, 
--insertBefore, 
--replaceChild
--removeChild 
++createElement,
++createTextNode,
++appendChild,
++insertBefore,
++replaceChild
++removeChild
 -parentNode.
 2.
 -images
 -links
 -forms
 -anchors
--item 
--namedItem 
+-item
+-namedItem
 3.
-Umożliwić użytkownikowi zmianę na żądanie stylów CSS: koloru tła, koloru tekstu, 
-rodzaju czcionki (z listy).  
+Umożliwić użytkownikowi zmianę na żądanie stylów CSS: koloru tła, koloru tekstu,
+rodzaju czcionki (z listy).
 4.
 -altKey
 -ctrlKey
--shiftKey 
+-shiftKey
 -keyCode
 -clientX
 -clientY
@@ -31,7 +31,7 @@ zdarzenia:
 -mousemove
 -mousedown
 -mouseover
--mouseout 
+-mouseout
 5.
 Zdarzenia w formularzu:
 -focus
