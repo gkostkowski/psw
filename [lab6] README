@@ -8,10 +8,10 @@ Lista 6:
 +removeChild
 -parentNode.
 2.
--images
--links
--forms
--anchors
++images
++links
++forms
++anchors
 -item
 -namedItem
 3.
