@@ -251,13 +251,27 @@ header > #blackBtn {
 
 	cursor:pointer;
 }
+header > #customizeBtn {
+	background:url("../img/brush.png");
+	background-size:cover;
+	width: 24px;
+	height:	24px;
+	border: 3px solid white;
+	position:absolute;
+	left:87%;
+	top:1%;
+	margin:0;
+	padding:0;
+
+	cursor:pointer;
+}
 
 
-#colorBtn:hover, #blackBtn:hover {
+#colorBtn:hover, #blackBtn:hover, #customizeBtn:hover {
 	opacity:0.4;
 }
 
-#colorBtn:active, #blackBtn:active {
+#colorBtn:active, #blackBtn:active, #customizeBtn:active {
 	opacity:0.7;
 }
 
