@@ -14,6 +14,7 @@ function addHeader() {
 
 	 var list = document.getElementById("carList");
 	 document.body.insertBefore(header, list);
+	 alert("Dodano nagłówek do: " + header.parentNode.nodeName);
 }
 
 function listLength() {
