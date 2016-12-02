@@ -18,7 +18,8 @@
             <p id = "dear_client">Drogi kliencie!
                 <br>Cieszymy sie, ze wybrałeś ofertę naszej firmy. Aby złożyć zamówienie <i>wprowadź poniższe dane. Pola wymagane są oznaczone gwiazdką.</i>
             </p>
-            <form action="order_form.php" method="post" autocomplete="on" >
+            <div id="order_form">
+			<form action="order_form.php" method="post" autocomplete="on" >
 				<p><label>Imie:
                     <input type="text"  id="first_name" name="first_name"  autofocus/> format tekstowy
                 </label></p>
@@ -42,6 +43,7 @@
 					<option value="Grudzień">
 				</datalist> Format tekstowy - wprowadź z klawiatury lub wybierz z rozwijanej listy
 				</label>
+				<input type="hidden" name="lucky_month" value="Czerwiec"></input>
                 <p><label>Adres email:*
                     <input type="email" id = "email"  name="email" required placeholder="example@domain.com" /> ciąg znakowy postaci: example@domain.com
                 </label></p>
@@ -53,6 +55,7 @@
                 <p><input type="submit">
                     <input type="reset"></p>
             </form>
+			</div>
         </section>
 		
         <section id="2"> <h3>Więcej informacji</h3>

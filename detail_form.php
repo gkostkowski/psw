@@ -30,42 +30,35 @@
 		<section>
 			<p class="search" ><label><br>
 	            		<input type="search" placeholder="Szukaj"/>
-		        </label></p><br><br>
+		        </label></p><br> 
 
-			<div class="prompt">
-				<h3>Twój samochód</h3>
-				<p >Powiedz nam czy jeździsz!</p>
+			<div style="background:green; 
+				padding:20px ; 
+				box-shadow:2px 2px gray;
+				box-radius:5px ;">
+				<?php 
+					define("MIN_SATSF",6);
+					define("BRIGHT_COL","#103431");
+					if(isset($_POST["color"]))
+						print($_POST["color"]);
+					if(isset($_POST["satisfaction"]))
+						if ($_POST["satisfaction"] < MIN_SATSF)
+							print("<p>Przykro Nam, że nie spełniamy Twoich oczekiwań - daj nam znać jak możemy to poprawić.</p>");
+						else print("<p>Jesteśmy zadowoleni, że udaje nam się spełnić Twoje oczekiwania!</p>");
+					$car_age=$_POST["month"];
+					settype($car_age, "integer");
+					if (date("Y") - $car_age < 1)
+						$car_age = "nowy";
+					elseif (date("Y") - $car_age < 4)
+						$car_age = "używany";
+					elseif (date("Y") - $car_age > 4)
+						$car_age = "stary";
+					print("<p>".htmlspecialchars("Twój samochód jest '".$car_age."'.", ENT_QUOTES)."</p>");
+					if ($_POST["color"] > BRIGHT_COL)
+						print("Preferujesz jaśniejsze kolory? Sprawdź Skodę Fabię w naszej ofercie!");
+					else print("Preferujesz ciemniejsze kolory? Sprawdź Audi A4 w naszej ofercie!");
+				?>
 			</div>
-			<form action="detail_form.php" method="post">
-				<p><label>Imię<br>
-		            		<input type="text" id="first_name" name="first_name" placeholder="Imię"/>
-			        </label></p>
-
-				<p><label>Nazwisko<br>
-		            		<input type="text" id="last_name" name="last_name"  placeholder="Nazwisko"/>
-			        </label></p>
-
-				<p><label>Data zakupu<br>
-		            		<input type="month" id="month" name="month"/>
-			        </label></p>
-
-				<p><label>Poziom zadowolenia<br>
-		            		<input type="range" min="0" max="10" name="satisfaction"/>
-			        </label></p>
-
-				<p><label>Kolor<br>
-		            		<input type="color" name="color">
-			        </label></p>
-
-
-
-
-				<p><label>Podaj nam link do zdjecia Twojego samochodu: <br>
-		            		<input type="url" placeholder="url"/>
-			        </label></p><br>
-				<p><input type="submit" value="Wyślij!">
-                   		<input type="reset" value="Wyczysc"></p>
-				</form>
 
 		</section>
 		<footer>
