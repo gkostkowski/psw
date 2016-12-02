@@ -18,12 +18,12 @@
             <p id = "dear_client">Drogi kliencie!
                 <br>Cieszymy sie, ze wybrałeś ofertę naszej firmy. Aby złożyć zamówienie <i>wprowadź poniższe dane. Pola wymagane są oznaczone gwiazdką.</i>
             </p>
-            <form method="post" autocomplete="on" >
+            <form action="order_form.php" method="post" autocomplete="on" >
 				<p><label>Imie:
-                    <input type="text"  id="first_name" autofocus/> format tekstowy
+                    <input type="text"  id="first_name" name="first_name"  autofocus/> format tekstowy
                 </label></p>
                 <p><label>Nazwisko:*
-                    <input type="text" id="last_name"  required/> format tekstowy
+                    <input type="text" id="last_name" name="last_name" required/> format tekstowy
                 </label></p>
 				<label> Miesiąc urodzenia:
 				<input type="text" list="months" name="month">
@@ -43,17 +43,18 @@
 				</datalist> Format tekstowy - wprowadź z klawiatury lub wybierz z rozwijanej listy
 				</label>
                 <p><label>Adres email:*
-                    <input type="email" id = "email" required placeholder="example@domain.com" /> ciąg znakowy postaci: example@domain.com
+                    <input type="email" id = "email"  name="email" required placeholder="example@domain.com" /> ciąg znakowy postaci: example@domain.com
                 </label></p>
 		<p>
                 <label>telefon:*</label>
-                    <input type = "tel" id="telephone" placeholder = "(+##) ### ### ###"
+                    <input type = "tel" id="telephone" name="phone" placeholder = "(+##) ### ### ###"
                      pattern ="\(\+\d{2}\) \d{3} \d{3} \d{3}" required /> Format: (+##) ### ### ### (dozwolone wyłącznie cyfry)
 		</p>
                 <p><input type="submit">
                     <input type="reset"></p>
             </form>
         </section>
+		
         <section id="2"> <h3>Więcej informacji</h3>
             <p>Masz pyatnia? Nie jesteś pewny którą ofertę wybrać lub chciałbyś dostosować ofertę do swoich potrzeb? <br>
             Napisz do Nas! Nasz konsultant skontaktuje się z Państwem w ciągu 24 godzin.</p>
