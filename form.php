@@ -23,7 +23,9 @@
     box-shadow:2px 2px gray;
     box-radius:5px ;">
     <?php
-      if (getType($_POST["lastname"]) == 'string' && getType($_POST["name"]) == 'string' ) {
+			$name = $_POST["name"];
+			$lastname = $_POST["lastname"];
+      if (getType($name) == 'string' && getType($lastname) == 'string' && strlen($lastname) >0 && strlen($name) >0) {
         print("<p>imię i nazwisko poprawne</p>");
         print("<p>Zamówienie zostało przyjęte</p>");
       } else {
@@ -46,7 +48,7 @@
         print( "<p>&nbsp&nbsp&nbsp&nbsp$months[$element]</p>" );
 
       $count = count($months);
-      print("<p>Liczba miesięcy promocyjnych: $count </p>");
+      echo "\\Liczba miesięcy promocyjnych: \"$count\" ";
 
     ?>
   </div>
