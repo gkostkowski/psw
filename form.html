@@ -27,11 +27,11 @@
 		<li>W terminie do 7 dni przez datą wynajmu wpłać zaliczkę</li>
 		<li>Ciesz się z <b>komfortu</b> oferowanych przez nas samochodów</li>
 	</ol>
-	<form id="form" method="post">
+	<form id="form" action="form.php" method="post" >
 		Imię<br>
-		<input type="text"/><br><br>
+		<input type="text" id="name" name="name"/><br><br>
 		Nazwisko<br>
-		<input type="text"><br><br>
+		<input type="text" id="lastname" name="lastname"><br><br>
 		E-mail<br>
 		<input type="text" disabled="disabled"><br><br><br>
 		<input type="radio" name="gender" value="mężczyzna" checked>Mężczyzna<br>
@@ -53,11 +53,11 @@
 		Uwagi<br>
  		<textarea name="message" rows="10" cols="80"></textarea><br><br>
 
-			<input type="checkbox">Mam ukończone 25 lat<br>
-			<input type="checkbox">Posiadam prawo jazdy kat. B<br>
-			<input type="checkbox">Planowany długość podróży przekracza 1000km<br>
-			<input type="checkbox">Podróż poza granicę Polsk<br>
-			<input type="checkbox">Podróz poza granicę Unii Europejskiej<br>
+			<input type="checkbox" name="isOver25">Mam ukończone 25 lat<br>
+			<input type="checkbox" name="hasDrivingLicence">Posiadam prawo jazdy kat. B<br>
+			<input type="checkbox" name="ovet1000km">Planowany długość podróży przekracza 1000km<br>
+			<input type="checkbox" name="isOutsideTravel">Podróż poza granicę Polsk<br>
+			<input type="checkbox" name="isOutsideUETravle">Podróz poza granicę Unii Europejskiej<br>
 		<br><br>
 
 		<input type="reset" value="Wyczyść dane"/>
