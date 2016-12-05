@@ -50,6 +50,10 @@
       $count = count($months);
       echo "\\Liczba miesięcy promocyjnych: \"$count\" ";
 
+			//|| !isset($_POST["hasDrivingLicence"]) && isset($_POST["isOver25"]))
+			if (isset($_POST["over1000km"]) ||  !isset($_POST["hasDrivingLicence"]) &&  isset($_POST["isOver25"])) {
+					print("<p>Wynajem wysokiego ryzyka</p>");
+			}
     ?>
   </div>
     <a class="bn_absolute_pos1" href="index.html">Powrót</a><br>
