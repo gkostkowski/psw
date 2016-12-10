@@ -134,6 +134,27 @@ footer {
 	border-radius: 10px 50px;
 }
 
+.prompt2 {
+	background-color:orange;
+	background-image: url(../img/pencil.png);
+	background-size:60px auto;
+	background-repeat:no-repeat;
+	background-position:center right;
+	margin: 2vh 2vw 2vh 2vw;
+	background-origin: content-box;
+	padding:  1vh 2vw 1vh 1vw;
+	position:relative;
+	display:inline-block;
+	border-left: 8px solid #ff7400 ;
+	height: 100px;
+	width:70%;
+	float:left;
+	
+	font-size:12pt;
+	line-height:90%;
+	border-radius: 10px 50px;
+}
+
 article {
 	text-indent: 50px;
 	text-align: justify;

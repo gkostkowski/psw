@@ -2,6 +2,14 @@ input {
 	width: 200px;
 }
 
+
+.modeBtn {
+	width:110px !important;
+	margin-top:20px;
+	margin-left:20px;
+	
+}
+
 p:active, h1:active, h2:active, section:active {
 	background-color: #fff2e6
 }

@@ -11,24 +11,24 @@
 		<link rel = "stylesheet" type = "text/css" href = "css/style.css" />
 		<link rel = "stylesheet" type = "text/css" href = "css/popup.css" />
 		<?php
-			setcookie('colorMode', 'common_style_high_contrast',60*60*24*3);
-			if(isset($_COOKIE["colorMode"]))
-						print("<link rel = \"stylesheet\" type = \"text/css\" href = \"css/$_COOKIE['colorMode']\" />");
-						print("fsdfs");
-						//$_COOKIE["colorMode"];
-		
+			define('DEF_STYLE', 'common_style');
+			define('HIGH_CON', 'common_style_high_contrast');
+			//setcookie('colorMode');
+			if(isset($_POST["black"])) 
+			{
+				setcookie('colorMode', HIGH_CON, time() + 60*60*24*3);
+			} elseif(!isset($_COOKIE["colorMode"]) or isset($_POST["color"]) )
+						setcookie('colorMode', DEF_STYLE,time() + 60*60*24*3);	
+			echo("<script>console.log('PHP: zawartość ciastka colorMode: ".$_COOKIE["colorMode"]."');</script>");
+			print("<link rel = \"stylesheet\" type = \"text/css\" href = \"css/$_COOKIE[colorMode].css\" />");
 		?>
-		<script>document.writeln('<link rel = "stylesheet" type = "text/css" href = "css/'+getStyleName()+'" />')</script>
+
 	</head>
 	<body>
 		<header>
 				 <img src = "img/header_logo.png" alt = "Renting Cars logo" />
 				 <h1 >Wypożyczalnia Renting Cars</h1>
 				 <h2 >Zaufaj profesjonalistom i podążaj do celu samochodem na miarę Twoich oczekiwań!</h2>
-				 <img  id="colorBtn" src = "img/color.png" alt = "color mode" />
-				 <img id="customizeBtn" src = "img/brush.png" alt = "customize style" />
-				 <img id="blackBtn" class="blackBtn" src = "img/black.png" alt = "high contrast mode" />
-
 		</header>
 		<nav>
 			<a href="form.html">Formularz rezerwacji</a> |
@@ -38,6 +38,11 @@
 			<a href="info.html">Informacje dodatkowe</a> |
 			<a href="orders.php">Zamówienia</a>
 		</nav>
+		<form action="#" method="post" style="opacity:1" class="prompt2">
+					<p style="color:black;"><i>Tryb wyświetlania strony</i></p><br>
+					<input type="submit" id="blackBtn" class="controls modeBtn" name="black" value="wysoki kontrast"></input>
+					<input type="submit"  id="colorBtn" class="modeBtn" name="color"  value="kolor"></input>
+				</form>
 		<article>
 
 			<p>
