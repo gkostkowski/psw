@@ -23,6 +23,9 @@ session_start();
 </header>
 
 <?php
+if (!isset($_SESSION["log"])) {
+	$_SESSION["log"] = FALSE;
+}
 if ($_SESSION["log"] == TRUE){
 		echo '<p>Jesteś zalogowany</p>';
 } else if ($_SERVER['REQUEST_METHOD'] == 'POST'){
