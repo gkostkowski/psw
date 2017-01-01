@@ -74,7 +74,7 @@ if (!isset($_SESSION["log"]) || $_SESSION["log"] == FALSE){
 					';
 			echo
 				'<a href="logout.php">Wyloguj</a><br>
-				<a href="index.html">Strona główna</a>';
+				<a href="index.php">Strona główna</a>';
 }
 
 ?>

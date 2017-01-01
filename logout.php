@@ -27,7 +27,7 @@ if ($_SESSION["log"] == FALSE){
 		echo '<p>Jesteś wylogowany</p>';
 } else if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$_SESSION["log"] = FALSE;
-		echo '<a href="index.html" > Przejdź do strony głównej </a>';
+		echo '<a href="index.php" > Przejdź do strony głównej </a>';
 		echo '<p>Wylogowano pomyślnie</p>';
 } else if (isset($_SESSION["LOG"]) || isset($_SESSION["LOG"]) == FALSE) {
 		echo

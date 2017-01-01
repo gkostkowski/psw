@@ -82,7 +82,7 @@
 		<br>&copy; Renting Cars  2016<br>
 		Wszelkie prawa do znaków handlowych zastrzeżone. <br>
 		<a href="mailto:consultant@rentingcars.com">Kontakt</a>
-			 |  <a href="index.html">Strona główna</a> |
+			 |  <a href="index.php">Strona główna</a> |
 			 <a href="mailto:admin@rentcar.com.html">Zgłoś uwagi</a>
 		</footer>
     </body>

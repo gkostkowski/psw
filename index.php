@@ -11,6 +11,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "css/style.css" />
 		<link rel = "stylesheet" type = "text/css" href = "css/popup.css" />
 		<?php
+			include 'db_utils.php';
 			define('DEF_STYLE', 'common_style');
 			define('HIGH_CON', 'common_style_high_contrast');
 			//setcookie('colorMode');
@@ -37,6 +38,9 @@
 			<a href="detail_form.html">Formularz użytkownika</a> |
 			<a href="info.html">Informacje dodatkowe</a> |
 			<a href="orders.php">Zamówienia</a>
+			<?php
+				enableUsersSummary();
+			?>
 		</nav>
 		<form action="#" method="post" style="opacity:1" class="prompt2">
 					<p style="color:black;"><i>Tryb wyświetlania strony</i></p><br>
@@ -87,7 +91,7 @@
 			&copy; Renting Cars  2016<br>
 			Wszelkie prawa do znaków handlowych zastrzeżone. <br>
 			<a href="mailto:consultant@rentingcars.com">Kontakt</a>
-			 |  <a href="index.html">Strona główna</a> |
+			 |  <a href="index.php">Strona główna</a> |
 			 <a href="mailto:admin@rentcar.com.html">Zgłoś uwagi</a>
 		</footer>
 

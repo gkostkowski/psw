@@ -14,7 +14,8 @@
 	</head>
 	<body>
 		<?php
-         $query = "SELECT * FROM users";
+         
+		 /*$query = "SELECT * FROM users";
 
          if ( !( $database = mysql_connect( "localhost",  
             "admin", "haslo" ) ) )
@@ -28,11 +29,13 @@
          {
             print( "<p>Zapytanie do bazy danych nie zostało wykonane!</p>" );
             die( mysql_error() . "</body></html>" );
-         } 
+         } */
+		 
+		
       ?>
 	 <p>Dane zarejestrowanych użytkowników przechowywane w bazie danych:</p>
 	 <table>
-         <caption>Contacts stored in the database</caption>
+         <caption>Dane użytkowników przechowywane w bazie danych</caption>
          <tr>
             <th>ID</th>
             <th>login</th>
@@ -41,7 +44,7 @@
             <th>wiek</th>
          </tr>
          <?php
-            for ( $counter = 0; $row = mysql_fetch_row( $result );
+            /*for ( $counter = 0; $row = mysql_fetch_row( $result );
                ++$counter )
             {
                print( "<tr>" );
@@ -49,8 +52,27 @@
                   print( "<td>$val</td>" );
                print( "</tr>" );
             }
-            mysql_close( $database );
-         ?>
+            mysql_close( $database );*/
+			
+			function printRow($row) {
+				$fields = ['id', 'login', 'password', 'name', 'age'];
+				echo "<tr>";
+				foreach ($fields as  $val)
+					echo("<td>$row[$val]</td>");
+				echo "</tr>";
+			}
+			
+			include 'db_utils.php';
+			$db = new DB();
+			$stmt = $db->getUsers();
+			//$table_fields = $q->fetchAll(PDO::FETCH_COLUMN);
+			//echo $table_fields;
+			while ($row = $stmt->fetch())
+			{
+				$val = $row['login'];
+				printRow($row);			
+			}
+		?>
       </table>
 
 
@@ -58,7 +80,7 @@
 			&copy; Renting Cars  2016<br>
 			Wszelkie prawa do znaków handlowych zastrzeżone. <br>
 			<a href="mailto:consultant@rentingcars.com">Kontakt</a>
-			 |  <a href="index.html">Strona główna</a> |
+			 |  <a href="index.php">Strona główna</a> |
 			 <a href="mailto:admin@rentcar.com.html">Zgłoś uwagi</a>
 		</footer>
 
