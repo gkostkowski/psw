@@ -40,6 +40,8 @@
 			<a href="orders.php">Zamówienia</a>
 			<?php
 				enableUsersSummary();
+				enableEditUserData();
+				enableRegisterNewUser();
 			?>
 		</nav>
 		<form action="#" method="post" style="opacity:1" class="prompt2">
