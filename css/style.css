@@ -20,54 +20,9 @@ a:link {
 a:visited {
 	color: #000000;
 }
-
-li:first-child {
-		font-size: 30px;
-}
-
-li:last-of-type {
-	font-size: 25px;
-}
-
-li:last-child {
-	font-size: 15px;
-}
-
-
-:target[id="form"]{
-	font-size: 20px;
-}
-
-p[id="dear_client"] {
-	font-size: 25px;
-}
-
-article:last-child {
-    background: pink;
-}
-
-article:nth-child(2) {
-    background: pink;
-}
-
-article:nth-last-child(2) {
-    background: pink;
-}
-
 a:hover {
 	color: blue;
 }
-
-required {
-  box-shadow: 5px 5px 5px red;
-}
-
-
-form  label {
-	font-size:80%;
-}
-
-
 
 #dost_samochody {
 	background-color:#ffe0b3;
@@ -86,16 +41,6 @@ form  label {
 
 .content {
 
-}
-
-h1, h2 {
-	text-shadow: 2px 2px #aaaaff;
-	text-transform:uppercase;
-	font-size:2vw;
-}
-h3, h4, h5, h6 {
-	font-family:helvetica;
-	font-size:1vw;
 }
 
 .button {
@@ -131,11 +76,6 @@ h3, h4, h5, h6 {
 }
 .button2:hover {
 	background: rgba(125, 219, 67, 1);
-}
-
-ol li {
-	font-size:1.2rem;
-	font-variant:small-caps;
 }
 
 .obr_tab {
