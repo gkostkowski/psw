@@ -39,4 +39,8 @@
         </ol>
         <asp:Button ID="Submit" runat="server" Text="Wyslij" />
     </fieldset>
+
+    <p class="info">
+        <asp:Label ID="Info" Text="info" Visible="False" runat="server"></asp:Label>
+    </p>
 </asp:Content>
