@@ -1,5 +1,30 @@
 <?php
-session_start();
+	session_start();
+	if (isset($_COOKIE["debug"]))
+		console_log($_COOKIE['debug']);
+	include 'db_utils.php';
+	
+	function console_log( $data ){
+	  echo '<script>';
+	  echo 'console.log('. json_encode( $data ).')';
+	  echo '</script>';
+	}
+	
+	function isValidUser($login, $password) {
+		
+		$db = new DB();
+		$stmt = $db->getUsers();
+		$exists = false;
+		while ($row = $stmt->fetch())
+		{
+			if ($row['login'] != NULL) console_log($row);
+			if ($login==$row['login'] && $password == $row['password'])
+				return true;
+		}
+		setcookie('debug', $exists, time() + 60*60*24*3);
+		return false;
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -23,17 +48,22 @@ session_start();
 </header>
 
 <?php
+echo '<a href="index.php" > Przejdź do strony głównej </a>';
 if ($_SESSION["log"] == TRUE){
-		echo '<p>Jesteś zalogowany</p>';
-} else if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+		echo "<p>Jesteś zalogowany jako <b>$_SESSION[loggedUser]</b></p>";
+		
+} else if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($_POST["login"] != '' && $_POST["pass"] != '')){
 		$login = $_POST["login"];
 		$password = $_POST["pass"];
-		if (strcmp($login, '123') == 0 && strcmp($password, '123') == 0 ) {
+		console_log($login);
+		if (isValidUser($login, $password)){
+		//if (strcmp($login, '123') == 0 && strcmp($password, '123') == 0 ) {
 				$_SESSION["log"] = TRUE;
+				$_SESSION["loggedUser"] = $login;
 				echo '<p>Zalogowano pomyślnie</p>';
+				echo("<script>console.log('PHP: zawartość ciastka log: ".$_SESSION["log"]."');</script>");
+				echo '<a href="orders.php" > Przejdź do zamówień </a><br>';
 
-				echo '<a href="orders.php" > Przejdź do zamówień </a>';
-				echo '<a href="show_users.php" > Wyświetl dane zarejestrowanych użytkowników</a>';
 		} else {
 				$_SESSION["log"] = FALSE;
 				echo '<p>Niepoprawne dane, zaloguj się ponownie</p>';
@@ -59,8 +89,6 @@ if ($_SESSION["log"] == TRUE){
 		</form>';
 }
 
-
 ?>
-
     </body>
 </html>

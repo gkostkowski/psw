@@ -22,3 +22,10 @@ INSERT INTO users (login, password, name, age) VALUES ('root', 	'123', 'Wacław'
 
 CREATE user 'admin'@'localhost' identified by 'haslo';
 GRANT select, insert, update, delete, create, drop, references, execute ON *.* TO 'admin'@'localhost';
+
+/*UPDATE DANYCH*/
+INSERT INTO users(login, password, name, age) VALUES('jan43', 'janauta3',
+ 'Jan', 43);
+ delete from users where id in (2,3,5);
+ update users set login = 'ar65', password='ar67auta' where id = 1;
+ update users set password='admin!' where id = 4;

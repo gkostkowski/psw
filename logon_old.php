@@ -33,6 +33,7 @@ if ($_SESSION["log"] == TRUE){
 				echo '<p>Zalogowano pomyślnie</p>';
 
 				echo '<a href="orders.php" > Przejdź do zamówień </a>';
+				echo '<a href="show_users.php" > Wyświetl dane zarejestrowanych użytkowników</a>';
 		} else {
 				$_SESSION["log"] = FALSE;
 				echo '<p>Niepoprawne dane, zaloguj się ponownie</p>';
@@ -58,6 +59,8 @@ if ($_SESSION["log"] == TRUE){
 		</form>';
 }
 
+
 ?>
+
     </body>
 </html>

@@ -65,8 +65,6 @@
 			include 'db_utils.php';
 			$db = new DB();
 			$stmt = $db->getUsers();
-			//$table_fields = $q->fetchAll(PDO::FETCH_COLUMN);
-			//echo $table_fields;
 			while ($row = $stmt->fetch())
 			{
 				$val = $row['login'];
@@ -100,3 +98,4 @@
 	<button id="hidePopup" onclick="hidePopup()"></button>
 
 </html>
+

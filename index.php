@@ -20,7 +20,7 @@
 				setcookie('colorMode', HIGH_CON, time() + 60*60*24*3);
 			} elseif(!isset($_COOKIE["colorMode"]) or isset($_POST["color"]) )
 						setcookie('colorMode', DEF_STYLE,time() + 60*60*24*3);	
-			echo("<script>console.log('PHP: zawartość ciastka colorMode: ".$_COOKIE["colorMode"]."');</script>");
+			echo("<script>console.log('PHP: zawartość ciastka log: ".$_COOKIE["colorMode"]."');</script>");
 			print("<link rel = \"stylesheet\" type = \"text/css\" href = \"css/$_COOKIE[colorMode].css\" />");
 		?>
 
@@ -37,11 +37,14 @@
 			<a href="order_form.html">Formularz osobowy</a> |
 			<a href="detail_form.html">Formularz użytkownika</a> |
 			<a href="info.html">Informacje dodatkowe</a> |
-			<a href="orders.php">Zamówienia</a>
+			<a href="orders.php">Zamówienia</a><br>
 			<?php
+				enableLogIn();
 				enableUsersSummary();
 				enableEditUserData();
 				enableRegisterNewUser();
+				enableLogOut();
+				showUser();
 			?>
 		</nav>
 		<form action="#" method="post" style="opacity:1" class="prompt2">
