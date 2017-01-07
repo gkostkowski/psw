@@ -52,7 +52,7 @@
 		</header>
 
         <nav>
-			<a href="index">Strona główna</a> |
+			<a href="/">Strona główna</a> |
 			<a href="form">Formularz zgłoszeniowy</a> |
 			<a href="about">Informacje</a> |
 		</nav>
