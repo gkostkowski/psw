@@ -14,24 +14,7 @@
 	</head>
 	<body>
 		<?php
-         
-		 /*$query = "SELECT * FROM users";
 
-         if ( !( $database = mysql_connect( "localhost",  
-            "admin", "haslo" ) ) )
-            die( "<p>Nie udało się połączyć z bazą danych!</p></body></html>" );
-
-         if ( !mysql_select_db( "psw", $database ) )
-            die( "<p>Nie udało się otworzyć bazy danych <b>users</b></p>
-               </body></html>" );
-
-         if ( !( $result = mysql_query( $query, $database ) ) ) 
-         {
-            print( "<p>Zapytanie do bazy danych nie zostało wykonane!</p>" );
-            die( mysql_error() . "</body></html>" );
-         } */
-		 
-		
       ?>
 	 <p>Dane zarejestrowanych użytkowników przechowywane w bazie danych:</p>
 	 <table>
@@ -44,16 +27,7 @@
             <th>wiek</th>
          </tr>
          <?php
-            /*for ( $counter = 0; $row = mysql_fetch_row( $result );
-               ++$counter )
-            {
-               print( "<tr>" );
-               foreach ( $row as $key => $val ) 
-                  print( "<td>$val</td>" );
-               print( "</tr>" );
-            }
-            mysql_close( $database );*/
-			
+		
 			function printRow($row) {
 				$fields = ['id', 'login', 'password', 'name', 'age'];
 				echo "<tr>";
