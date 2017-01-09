@@ -98,11 +98,11 @@
 	}
 
 	function isValid($login, $password, $name, $age) {
-		/*if (! preg_match("/[A-z].+/", $login))
-			return false;*/
+		if (! preg_match("/[A-Za-z][0-9A-Za-z]{4,20}/", $login))
+			return false;
 		if (! preg_match("/.{6,32}/", $password))
 			return false;
-		if (! preg_match("/[A-z]{2,40}/", $name))
+		if (! preg_match("/[A-Za-z]{2,40}/", $name))
 			return false;
 		return (intval($age) >=18 && intval($age)<=99);
 

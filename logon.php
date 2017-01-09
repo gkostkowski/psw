@@ -49,10 +49,7 @@
 
 <?php
 echo '<a href="index.php" > Przejdź do strony głównej </a>';
-if ($_SESSION["log"] == TRUE){
-		echo "<p>Jesteś zalogowany jako <b>$_SESSION[loggedUser]</b></p>";
-		
-} else if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($_POST["login"] != '' && $_POST["pass"] != '')){
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && ($_POST["login"] != '' && $_POST["pass"] != '')){
 		$login = $_POST["login"];
 		$password = $_POST["pass"];
 		console_log($login);
@@ -87,6 +84,10 @@ if ($_SESSION["log"] == TRUE){
 
 			<input type="submit" value="Zaloguj!"/><br>
 		</form>';
+} else if (isset($_SESSION['log'])){
+if ($_SESSION["log"] == TRUE)
+		echo "<p>Jesteś zalogowany jako <b>$_SESSION[loggedUser]</b></p>";
+		
 }
 
 ?>

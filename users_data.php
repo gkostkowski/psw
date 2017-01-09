@@ -89,8 +89,8 @@
 							<input type="text" id="age" name="age" value="$age"  placeholder="Wiek"/>
 					</label></p>
 
-					<p><input type="submit" value="Wyślij!">
-							<input type="reset" value="Wyczysc"></p>
+					<p><input type="submit" value="Wyślij!">						
+					</p>
 				</form>
 HTML;
 				$dbSaveSuccess =  <<<HTML
