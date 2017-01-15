@@ -56,6 +56,7 @@
 			<a href="form">Formularz zgłoszeniowy</a> |
 			<a href="about">Informacje</a> |
             <a href="Offer">Oferta</a> |
+            <a href="BasketPage">Koszyk</a> 
 		</nav>
 
             <asp:ContentPlaceHolder ID="MainContent" runat="server">

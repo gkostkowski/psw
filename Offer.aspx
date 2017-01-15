@@ -33,7 +33,7 @@
     <br />
     <asp:Button ID="Button2" runat="server" OnClick="ObliczCalkowityKoszt" Text="Oblicz cenę" AutoPostBack="True"/><br />
     <b><asp:Label ID="Lkoszt" runat="server" Text="Koszt wybranej oferty: " Visible="false"></asp:Label></b> <br />
-    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Dodaj do koszyka" /><br />
+    <asp:Button ID="Button1" runat="server" OnClick="DodajDoKoszyka" Text="Dodaj do koszyka"/><br />
     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/OrdersSummary.aspx">Przejdź do koszyka</asp:HyperLink>
 
 

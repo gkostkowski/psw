@@ -22,13 +22,7 @@ public partial class Offer : System.Web.UI.Page
         {c_renaultClio,240},
         {c_nissanAlmera,275}
     };
-    /*
-    const int audiA3 = 310;
-    const int fiatPanda = 320;
-    const int alfaRomeo = 280;
-    const int audiA4 = 350;
-    const int renaultClio = 240;
-    const int nissanAlmera = 275;*/
+
     const int MLODY_KIEROWCA = 47;
     const int ZWIERZETA = 16;
     const string RB_CONTROL = "System.Web.UI.WebControls.RadioButtonList";
@@ -39,6 +33,7 @@ public partial class Offer : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        ItemsAmount.Text = Basket.GetCount().ToString();
         if (IsPostBack)
         {
             if (dataDo.Text != "" && dataOd.Text != "") 
@@ -87,6 +82,7 @@ public partial class Offer : System.Web.UI.Page
         return (dataDo.Date - dataOd.Date).TotalDays;
     }
 
+    /*Oblicza koszt dla wszystkich wybranych samochodow*/
     protected void ObliczCalkowityKoszt(object sender, EventArgs e)
     {
         string output = "Koszt wybranej oferty wynosi: ";
@@ -103,7 +99,23 @@ public partial class Offer : System.Web.UI.Page
         Lkoszt.Text = output + kosztCalk + " PLN";
         Lkoszt.Visible = true;
     }
+
+    protected void DodajDoKoszyka(object sender, EventArgs e)
+    {
+        for (int i = 0; i < CBElems.Items.Count; i++)
+        {
+            
+            if (CBElems.Items[i].Selected)
+            {
+                string wybraneAuto = CBElems.Items[i].Text;
+                double kosztJednAuta = ObliczCene(wybraneAuto);
+                Basket.AddItem(wybraneAuto, kosztJednAuta);
+            }
+        }
+        Lkoszt.Text = "Wybrane elementy zostały dodane do koszyka.";
+    }
     
+    /*Oblicza koszt dla jednego samochodu*/
     protected double ObliczCene(string auto)
     {
         int przedzial =0;
