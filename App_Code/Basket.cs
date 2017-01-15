@@ -36,6 +36,16 @@ public class Basket : System.Web.UI.Page
         return basket.Count;
     }
 
+    public static double getTotalCount()
+    {
+        double total = 0;
+        for (int i=0;  i< Basket.GetCount(); i++)
+        {
+            total += basket[i].Item2;
+        }
+        return total;
+    }
+
     public static void Clear()
     {
         basket.Clear();
