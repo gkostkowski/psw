@@ -18,10 +18,12 @@
 
     <asp:Label ID="Label5" runat="server" Text="Informacje dodatkowe"></asp:Label><br />
     <asp:Label ID="Label4" runat="server" Text="Data od:"></asp:Label>
-    <input ID="dataOd" type="date"/> <br />
+    <asp:TextBox ID="dataOd" type="date" runat="server"></asp:TextBox> <br /> <br />
     <asp:Label ID="Label6" runat="server" Text="Data do:"></asp:Label>
-    <input ID="dataDo" type="date" /> <br />
+    <asp:TextBox ID="dataDo" type="date" runat="server" AutoPostBack="True"></asp:TextBox> <br />
     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="dataDo" ValidationExpression="\d{4}-\d{2}-\d{2}" Visible="False"></asp:RegularExpressionValidator>
+    <i><asp:Label ID="IleDniLabel" runat="server" Text="liczba dni: " Visible="false"></asp:Label>
+    <asp:Label ID="IleDni" runat="server" Text="liczba dni: " Visible="false"></asp:Label></i>
 
     <asp:CheckBoxList ID="CBAdditional" runat="server">
         <asp:ListItem>Dodatkowe ubezpieczenie</asp:ListItem>
@@ -29,6 +31,8 @@
         <asp:ListItem>Przewóz zwierząt</asp:ListItem>
     </asp:CheckBoxList>
     <br />
+    <asp:Button ID="Button2" runat="server" OnClick="ObliczCalkowityKoszt" Text="Oblicz cenę" AutoPostBack="True"/><br />
+    <b><asp:Label ID="Lkoszt" runat="server" Text="Koszt wybranej oferty: " Visible="false"></asp:Label></b> <br />
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Dodaj do koszyka" /><br />
     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/OrdersSummary.aspx">Przejdź do koszyka</asp:HyperLink>
 
