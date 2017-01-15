@@ -22,10 +22,11 @@ public partial class Offer : System.Web.UI.Page
         {c_renaultClio,240},
         {c_nissanAlmera,275}
     };
-
+    bool showMsg = false;
     const int MLODY_KIEROWCA = 47;
     const int ZWIERZETA = 16;
     const string RB_CONTROL = "System.Web.UI.WebControls.RadioButtonList";
+    const string BTN_CONTROL = "System.Web.UI.WebControls.Button";
     
     string[] glowna = {c_audiA4, c_renaultClio, c_fiatPanda, c_nissanAlmera};
     string[] Opole = {c_audiA3, c_fiatPanda, c_alfaRomeo};
@@ -33,12 +34,22 @@ public partial class Offer : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session.Count > 0 && !Session.IsNewSession)
+            if ((string)Session["msg"] != "")
+        {
+            Lkoszt.Visible = true;
+            Lkoszt.Text = (string)Session["msg"];
+            Session["msg"] = "";
+        }
         ItemsAmount.Text = Basket.GetCount().ToString();
         if (IsPostBack)
         {
             if (dataDo.Text != "" && dataOd.Text != "") 
             {
-                IleDni.Text = Ile_Dni(dataOd.Text, dataDo.Text).ToString();
+                if (ValidatePeriod())
+                    IleDni.Text = Ile_Dni(dataOd.Text, dataDo.Text).ToString();
+                else
+                    IleDni.Text = "Niepoprawny okres czasu. ";
                 IleDni.Visible = true;
                 IleDniLabel.Visible = true;
                 if (Lkoszt.Visible)
@@ -67,10 +78,7 @@ public partial class Offer : System.Web.UI.Page
 
                 
     }
-    protected void Button1_Click(object sender, EventArgs e)
-    {
 
-    }
 
     protected double Ile_Dni(string d1, string d2) {
         d1 += " 00:00:00,000";
@@ -95,24 +103,36 @@ public partial class Offer : System.Web.UI.Page
                 kosztCalk += ObliczCene(CBElems.Items[i].Text);
             }
         }
-
         Lkoszt.Text = output + kosztCalk + " PLN";
         Lkoszt.Visible = true;
     }
 
     protected void DodajDoKoszyka(object sender, EventArgs e)
     {
-        for (int i = 0; i < CBElems.Items.Count; i++)
+        int i = 0;
+        bool noError = true;
+        while (i < CBElems.Items.Count && noError )
         {
             
             if (CBElems.Items[i].Selected)
             {
                 string wybraneAuto = CBElems.Items[i].Text;
                 double kosztJednAuta = ObliczCene(wybraneAuto);
+                if (kosztJednAuta <= 0)
+                {
+                    Session["msg"] = "Podano niepoprawne dane.";
+                    noError = false;
+                }else 
                 Basket.AddItem(wybraneAuto, kosztJednAuta);
             }
+            i++;
         }
-        Lkoszt.Text = "Wybrane elementy zostały dodane do koszyka.";
+        if (ValidateCBList() && noError)
+            Session["msg"] = "Wybrane elementy zostały dodane do koszyka.";
+        else
+            if (!ValidateCBList())
+                Session["msg"] = "Żaden samochód nie został wybrany.";
+        Response.Redirect(Request.RawUrl);
     }
     
     /*Oblicza koszt dla jednego samochodu*/
@@ -157,4 +177,18 @@ public partial class Offer : System.Web.UI.Page
         return control;
     }
 
+    protected bool ValidateCBList ()
+    {
+        int sel = 0;
+        for (int i = 0; i < CBElems.Items.Count; i++)
+        {
+            if (CBElems.Items[i].Selected)
+                sel++;
+        }
+        return sel > 0;
+    }
+    protected bool ValidatePeriod()
+    {
+        return Ile_Dni(dataOd.Text, dataDo.Text) > 0;
+    }
 }
