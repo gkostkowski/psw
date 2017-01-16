@@ -2,5 +2,5 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:TextBox runat="server" ID="Info" /><br />
+    <asp:Label ID="Info" runat="server"></asp:Label><br />
 </asp:Content>

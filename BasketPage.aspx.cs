@@ -23,21 +23,58 @@ public partial class BasketPage : System.Web.UI.Page
             EmptyBasket.Visible = true;
             Button1.Visible = false;
             Total.Visible = false;
-            Price.Visible = true;
-            //OrderBtn.Visible = false;
-            ShippingMethod.Visible = false;
+            Price.Visible = false;
+            Label1.Visible = false;
+            PaymentType.Items[0].Attributes.CssStyle.Add("visibility", "hidden");
+            PaymentType.Items[1].Attributes.CssStyle.Add("visibility", "hidden");
+            ShippingMethod.Items[0].Attributes.CssStyle.Add("visibility", "hidden");
+            ShippingMethod.Items[1].Attributes.CssStyle.Add("visibility", "hidden");
+            ShippingMethod.Items[2].Attributes.CssStyle.Add("visibility", "hidden");
+            Label2.Visible = false;
+            StreetLabel.Visible = false;
+            Street.Visible = false;
+            CityLabel.Visible = false;
+            City.Visible = false;
+            NumberLabel.Visible = false;
+            Number.Visible = false;
+            Submit.Visible = false;
         }
         else
         {
+            if (ShippingMethod.SelectedIndex == 0 || ShippingMethod.SelectedIndex < 0) 
+            {
+                StreetLabel.Visible = false;
+                Street.Visible = false;
+                CityLabel.Visible = false;
+                City.Visible = false;
+                NumberLabel.Visible = false;
+                Number.Visible = false;
+                RequiredFieldValidator1.Enabled = false;
+                RequiredFieldValidator2.Enabled = false;
+                RequiredFieldValidator3.Enabled = false;
+                RegularExpressionValidator1.Enabled = false;
+            }
+            else
+            {
+                StreetLabel.Visible = true;
+                Street.Visible = true;
+                CityLabel.Visible = true;
+                City.Visible = true;
+                NumberLabel.Visible = true;
+                Number.Visible = true;
+                RequiredFieldValidator1.Enabled = true;
+                RequiredFieldValidator2.Enabled = true;
+                RequiredFieldValidator3.Enabled = true;
+                RegularExpressionValidator1.Enabled = true;
+            }
+
             BasketContent.Items.Clear();
             for (int i = 0; i < basket.Count; i++)
             {
                 ListItem li = new ListItem();
-                //li.Attributes.Add(basket[i].Item1, basket[i].Item2+"");
                 li.Text = basket[i].Item1 + ", " + basket[i].Item2 + " PLN";
                 BasketContent.Items.Add(li);
             }
-            //OrderBtn.Visible = true;
             Button1.Visible = true;
             Total.Visible = true;
             Price.Visible = true;
@@ -75,5 +112,12 @@ public partial class BasketPage : System.Web.UI.Page
     {
         Basket.Clear();
         BasketContent.Items.Clear();
+        Response.Redirect(Request.Url.AbsoluteUri);
+    }
+
+    protected void Order(object sender, EventArgs e)
+    {
+        Session["total_cost"] = Total.Text;
+        Response.Redirect(Page.ResolveClientUrl("/OrdersSummary"));
     }
 }

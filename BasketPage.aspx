@@ -39,7 +39,6 @@
         <b><asp:Label ID="Price" runat="server" Text="Wartość koszyka: " Visible="true"></asp:Label></b> <br />
         <b><asp:Label ID="Total" runat="server" Text="Wartość koszyka: " Visible="true"></asp:Label></b> <br />
         
-
-        <asp:Button ID="Submit" runat="server" PostBackUrl="~/OrdersSummary.aspx" Text="Złóż" />
+        <asp:Button ID="Submit" runat="server" OnClick="Order" Text="Złóż"/><br />
         </fieldset>
 </asp:Content>
