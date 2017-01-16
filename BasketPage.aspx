@@ -33,7 +33,7 @@
         <asp:Label ID="NumberLabel" runat="server" AssociatedControlID="Number">Numer</asp:Label><br />
         <asp:TextBox runat="server" ID="Number" /><br />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Number" ErrorMessage="numer jest wymagany." ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator><br />
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="Number" runat="server" ErrorMessage="Only Numbers allowed" ValidationExpression="\d+"></asp:RegularExpressionValidator><br />
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="Number" runat="server" ErrorMessage="Wymagana jest liczba" ValidationExpression="\d+"></asp:RegularExpressionValidator><br />
         
         <br />
         <b><asp:Label ID="Price" runat="server" Text="Wartość koszyka: " Visible="true"></asp:Label></b> <br />
